@@ -3,6 +3,7 @@
 I am building a Discord Bot that can encipher and decipher messages.
 
 ## Current Ciphers
+- Binary
 - Base64
 - Hex
 
@@ -24,7 +25,6 @@ I am building a Discord Bot that can encipher and decipher messages.
 - Bacon
 - Morse
 - Baudot
-- Binary
 - Decimal
 - Octal
 - Base32
