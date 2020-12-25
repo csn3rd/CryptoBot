@@ -10,12 +10,16 @@ I am building a Discord Bot that can encipher and decipher messages.
 - Substitution
 - ROT/CAESAR
 - Vigenere
+- Beaufort
 - Atbash
 - Affine
+- Hill Cipher
 - A1Z26
 - Polybius
 - Railfence
 - Playfair
+- Bifid
+- Trifid
 - Enigma
 - Bacon
 - Morse
