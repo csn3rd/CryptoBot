@@ -1,6 +1,7 @@
 import discord
 import os
 import solver
+import asyncio
 from keep_alive import keep_alive
 
 client = discord.Client()
@@ -9,7 +10,7 @@ client = discord.Client()
 async def on_ready():
 	print('Logged in as {0.user}'.format(client))
 	print('-------------------------------------\n')
-	await client.change_presence(activity=discord.Activity(name="CTFs and solving ciphers.", type="5"))
+	await client.change_presence(activity=discord.Activity(name="CTFs and solving ciphers. Learn more at CSN3RD.com/CryptoBot", type="5"))
 
 @client.event
 async def on_message(message):
@@ -19,11 +20,7 @@ async def on_message(message):
 	msg = message.content
 
 	if solver.isCommand(msg):
-		try:
-			await message.channel.send(solver.evaluate(msg))
-		except:
-			await message.channel.send('Can\'t complete command.')
-
+		await message.channel.send(solver.evaluate(msg))
 
 keep_alive()
 client.run(os.getenv('TOKEN'))
